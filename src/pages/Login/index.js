@@ -14,13 +14,12 @@ function Login() {
         Insira o seu nome
       </Titulo>
       <InputContainer>
-        <InputLabel
-          value={nome}
-          onChange={(event) => setNome(event.target.value)}
-        >
+        <InputLabel>
           Nome
         </InputLabel>
         <Input
+          value={nome}
+          onChange={(event) => setNome(event.target.value)}
           type="text"
         />
       </InputContainer>
@@ -31,7 +30,7 @@ function Login() {
         <Input
           type="number"
           value={saldo}
-          onChange={(event) => setSaldo(event.target.value)}
+          onChange={(event) => setSaldo(Number(event.target.value))}
           startAdornment={
             <InputAdornment position="start">
               R$

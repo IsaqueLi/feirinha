@@ -3,13 +3,14 @@ import { memo } from 'react';
 import { IconButton } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
+import { priceFormatter } from 'utils/formatadores';
 
 
 function Produto({
   nome,
   foto,
   id,
-  valor,
+  valor = 0,
   unidade
 }) {
   return (
@@ -20,7 +21,7 @@ function Produto({
             alt={`foto de ${nome}`}
           />
           <p>
-            {nome} - R$ {valor?.toFixed(2)} <span>Kg</span>
+            {nome} - {priceFormatter(valor)} <span>Kg</span>
           </p>
         </div>
         <div>

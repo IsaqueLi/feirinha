@@ -14,7 +14,9 @@ function Router() {
                     </UsuarioProvider>
                 </Route>
                 <Route path="/feira">
-                    <Feira />
+                    <UsuarioProvider>
+                        <Feira />
+                    </UsuarioProvider>
                 </Route>
                 <Route path="/carrinho">
                     <Carrinho />
