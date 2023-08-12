@@ -22,6 +22,7 @@ function Produto({
           />
           <p>
             {nome} - {priceFormatter(valor)} <span>Kg</span>
+              <strong style={{ padding: '0 1rem' }}>(1)</strong>
           </p>
         </div>
         <div>
