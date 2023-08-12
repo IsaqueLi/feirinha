@@ -1,5 +1,6 @@
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 import { StylesProvider } from '@material-ui/core/styles';
+import { UsuarioProvider } from './common/context/Usuario'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -20,7 +21,9 @@ ReactDOM.render(
   <React.StrictMode>
     <StylesProvider injectFirst>
       <ThemeProvider theme={theme}>
-        <Router />
+        <UsuarioProvider>
+          <Router />
+        </UsuarioProvider>
       </ThemeProvider>
     </StylesProvider>
   </React.StrictMode>,
