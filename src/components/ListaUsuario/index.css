@@ -1,0 +1,10 @@
+.usuario {
+    width: 70%;
+    height: 3rem;
+}
+
+.dados {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

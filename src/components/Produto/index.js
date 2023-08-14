@@ -11,10 +11,13 @@ function Produto({
   foto,
   id,
   valor = 0,
-  unidade
+  unidade,
+  saldo,
+  mudaSaldo
 }) {
+  console.log(saldo, mudaSaldo)
   return (
-      <Container>
+    <Container>
         <div>
           <img
             src={`/assets/${foto}.png`}

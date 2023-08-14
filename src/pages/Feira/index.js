@@ -12,7 +12,7 @@ import { priceFormatter } from 'utils/formatadores';
 
 
 function Feira() {
-  const { nome, saldo } = useContext(UsuarioContext);
+  const { nome, saldo, setSaldo } = useContext(UsuarioContext);
 
   return (
     <Container>
@@ -32,6 +32,8 @@ function Feira() {
           <Produto
             {...produto}
             key={produto.id}
+            saldo={ saldo }
+            mudaSaldo={setSaldo}
           />
         ))}
       </Lista>
