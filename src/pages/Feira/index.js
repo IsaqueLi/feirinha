@@ -8,8 +8,6 @@ import Produto from 'components/Produto';
 import NavBar from './NavBar';
 import { useContext } from 'react';
 import { UsuarioContext } from 'common/context/Usuario';
-import { priceFormatter } from 'utils/formatadores';
-
 
 function Feira() {
   const { nome, saldo } = useContext(UsuarioContext);
@@ -20,7 +18,7 @@ function Feira() {
       <Header>
         <div>
           <h2>Olá, {nome}!</h2>
-          <h3>Saldo: {priceFormatter(saldo)}</h3>
+          <h3>Saldo: R$ {saldo}</h3>
         </div>
         <p>Encontre os melhores produtos orgânicos!</p>
       </Header>
